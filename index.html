@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearMark AI | Remove Watermarks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">ClearMark AI</a>
+        
+        <div class="nav-links">
+            <a href="process.html">How it Works</a>
+        </div>
+        
+        <a href="tool.html" class="btn-primary">Launch App</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="hero">
+        <div class="glass-card" style="padding: 8px 16px; border-radius: 30px; margin-bottom: 24px; font-size: 12px; color: var(--accent-blue);">
+            ✦ Powered by Next-Gen Vision AI
+        </div>
+        
+        <h1>Elevate Your Image Experience</h1>
+        <p>Unlock the true potential of your photos in a fully automated environment. Erase watermarks instantly with state-of-the-art AI.</p>
+        
+        <a href="tool.html" class="btn-primary" style="padding: 16px 32px; font-size: 16px;">
+            Upload Image & Erase
+        </a>
+
+        <!-- Interactive Slider Section -->
+        <div class="demo-categories">
+            <button class="active">Animals</button>
+            <button>Products</button>
+            <button>People</button>
+        </div>
+
+        <div class="image-compare-container">
+            <!-- Bottom Image (Clean / Full Color) Using a live URL -->
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1000&auto=format&fit=crop" alt="Clean Image" class="compare-img">
+            
+            <!-- Top Image (Watermarked / Grayscale for demonstration) Using a live URL -->
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1000&auto=format&fit=crop&grayscale" alt="Watermarked Image" class="compare-img overlay-img" id="overlayImg">
+            
+            <!-- Dragger -->
+            <div class="compare-handle" id="compareHandle">
+                <div class="handle-circle"></div>
+            </div>
+            
+            <!-- Invisible input for dragging -->
+            <input type="range" min="0" max="100" value="50" class="compare-slider" id="compareSlider">
+        </div>
+
+        <a href="tool.html" style="margin-top: 24px; color: var(--accent-blue); text-decoration: none; font-size: 14px; font-weight: 600;">See more samples →</a>
+    </main>
+
+    <!-- Script for the interactive slider -->
+    <script>
+        const slider = document.getElementById('compareSlider');
+        const overlay = document.getElementById('overlayImg');
+        const handle = document.getElementById('compareHandle');
+
+        slider.addEventListener('input', (e) => {
+            const sliderValue = e.target.value;
+            overlay.style.clipPath = `polygon(0 0, ${sliderValue}% 0, ${sliderValue}% 100%, 0 100%)`;
+            handle.style.left = `${sliderValue}%`;
+        });
+    </script>
+</body>
+</html>

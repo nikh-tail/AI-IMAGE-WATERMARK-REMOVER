@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearMark AI | Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">ClearMark AI</a>
+        <a href="index.html" class="nav-links" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">← Back to Home</a>
+    </nav>
+
+    <!-- Tool Section -->
+    <main class="tool-container">
+        <div class="glass-card upload-box">
+            <h2>AI Workspace</h2>
+            <p style="color: var(--text-muted); margin-top: 8px; margin-bottom: 32px;">Upload an image to magically remove watermarks, text, or logos.</p>
+            
+            <label for="file-upload" class="upload-area">
+                <div class="upload-icon">📁</div>
+                <h3>Drag & Drop your image here</h3>
+                <p>or click to browse from your device</p>
+                <p style="font-size: 12px; margin-top: 12px; opacity: 0.5;">Supports JPG, PNG, WEBP (Max 5MB)</p>
+            </label>
+            
+            <input id="file-upload" type="file" class="hidden-input" accept="image/*">
+            
+            <button class="btn-primary" style="width: 100%; padding: 16px; font-size: 16px; opacity: 0.5; cursor: not-allowed;">
+                Process Image
+            </button>
+        </div>
+    </main>
+
+</body>
+</html>
